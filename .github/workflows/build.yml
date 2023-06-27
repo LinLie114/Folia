@@ -1,9 +1,10 @@
 name: Patch and Build
 
 on:
-  push:
-    branches: [ "**" ]
-  pull_request:
+  workflow_run:
+    workflows: [Build]
+    types:
+      - completed
 
 jobs:
   build:
