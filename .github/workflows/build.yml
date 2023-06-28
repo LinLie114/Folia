@@ -40,5 +40,5 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: Folia-Build
-          path: ./build/libs/*.jar
+          path: ./build/libs
           if-no-files-found: error
