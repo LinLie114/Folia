@@ -36,11 +36,6 @@ jobs:
         run: ./gradlew applyPatches
       - name: Build
         run: ./gradlew build
-      - name: Create Release Tag
-        uses: rickstaa/action-create-tag@v1
-        with:
-          tag: "v1_20_1-${{ env.Compile_Date }}"
-          message: "1.20.1 Build ${{ env.Compile_Date }}"
       - name: Upload build artifacts
         uses: actions/upload-artifact@v2
         with:
